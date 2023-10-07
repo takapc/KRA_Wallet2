@@ -1,0 +1,30 @@
+{
+    "name": "kra_wallet2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "ts-node src/main.ts",
+        "start": "ts-node src/main.ts",
+        "compile": "tsc -p .",
+        "typeorm": "typeorm-ts-node-commonjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^16.11.10",
+        "@typescript-eslint/eslint-plugin": "^6.7.3",
+        "@typescript-eslint/parser": "^6.7.3",
+        "eslint": "^8.50.0",
+        "ts-node": "10.7.0",
+        "typescript": "4.5.2"
+    },
+    "dependencies": {
+        "axios": "^1.5.1",
+        "discord.js": "^14.13.0",
+        "dotenv": "^16.3.1",
+        "mysql": "^2.14.1",
+        "reflect-metadata": "^0.1.13"
+    }
+}
