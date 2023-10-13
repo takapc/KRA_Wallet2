@@ -5,8 +5,9 @@ import "dotenv/config";
 import { db } from "./commands/db";
 import { create } from "./commands/create";
 import { tr } from "./commands/tr";
+import { all } from "./commands/all";
 
-const CommandList: Command[] = [credit, db, create, tr];
+const CommandList: Command[] = [credit, db, create, tr, all];
 
 const client = new Client({
     intents: [
@@ -30,7 +31,7 @@ client.on("messageCreate", async (message: Message) => {
     if (message.author.bot) return;
     for (const c of CommandList) {
         if (message.content.split(" ")[0] == `.${c.name}`) {
-            c.execute(new KRAMessage(message));
+            c.execute(new KRAMessage(message, client));
         }
     }
 });

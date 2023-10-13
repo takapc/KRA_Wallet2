@@ -8,6 +8,12 @@ export const GetUser = async (id: string): Promise<KraUser> => {
     });
 };
 
+export const GetAllUser = async (): Promise<KraUser[]> => {
+    return await axios.get(`${endpoint}/users`).then(async (res) => {
+        return res.data;
+    });
+};
+
 export const CreateUser = async (id: string): Promise<KraUser> => {
     const user = {
         user_id: id,
