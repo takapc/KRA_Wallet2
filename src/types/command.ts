@@ -1,8 +1,13 @@
-import { Client, Message } from "discord.js";
+import { ButtonInteraction, Client, Message } from "discord.js";
 
 export interface Command {
     name: string;
     execute: (message: KRAMessage) => void;
+}
+
+export interface KRAInteraction {
+    name: string;
+    execute: (interaction: ButtonInteraction) => void;
 }
 
 export class KRAMessage {
