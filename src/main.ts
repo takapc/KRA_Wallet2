@@ -8,8 +8,9 @@ import { tr } from "./commands/tr";
 import { all } from "./commands/all";
 import { game } from "./commands/game";
 import { tintiro } from "./interactions/tintiro";
+import { send } from "./commands/send";
 
-const CommandList: Command[] = [credit, db, create, tr, all, game];
+const CommandList: Command[] = [credit, db, create, tr, all, game, send];
 const InteractionList: KRAInteraction[] = [tintiro];
 
 export const client = new Client({
